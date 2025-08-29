@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "product-release-control"
+version = "0.1.0"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+sqlalchemy = "^2.0.43"
+asyncpg = "^0.30.0"
+alembic = "^1.16.5"
+httpx = "^0.28.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+ruff = "*"
+black = "*"
+pre-commit = "*"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+ignore = ["E203"]
+select = ["E", "F", "W", "C90"]
+exclude = [".venv", "build", "dist"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
