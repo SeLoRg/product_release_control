@@ -10,6 +10,7 @@ sqlalchemy = "^2.0.43"
 asyncpg = "^0.30.0"
 alembic = "^1.16.5"
 httpx = "^0.28.1"
+pydantic-settings = "^2.10.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
@@ -32,10 +33,20 @@ exclude = '''
 [tool.ruff]
 line-length = 88
 target-version = "py313"
-ignore = ["E203"]
-select = ["E", "F", "W", "C90"]
-exclude = [".venv", "build", "dist"]
 
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90"]
+ignore = [
+    "E203",  # whitespace before ':'
+    "E402",  # module-level import not at top
+    "I001",  # import order
+    "I002",  # multiple imports on one line
+]
+exclude = [
+    ".venv",
+    "build",
+    "dist"
+]
 
 [build-system]
 requires = ["poetry-core"]

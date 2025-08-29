@@ -5,47 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79befb2b-4b9f-44f0-9290-fd54486e8049" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/alembic.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic_service/script.py.mako" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/app/middleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/configs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/configs/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/crud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/dependencies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/env-files/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/env-files/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/exceptions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/logger/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/core/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/app/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/product_controler/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/product_release_control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/product_release_control.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic_service/alembic/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/README" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/alembic/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/alembic.ini" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/alembic.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/alembic/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic_service/script.py.mako" beforeDir="false" afterPath="$PROJECT_DIR$/alembic_service/alembic/script.py.mako" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/core/env-files/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/env-files/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/core/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/models/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -87,6 +59,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic_service\alembic" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\src\backend\product_controler" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic_service" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic" />
@@ -121,7 +94,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
