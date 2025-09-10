@@ -11,12 +11,15 @@ asyncpg = "^0.30.0"
 alembic = "^1.16.5"
 httpx = "^0.28.1"
 pydantic-settings = "^2.10.1"
+pydantic = "^2.11.7"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^1.1.0"
 pytest = "*"
 ruff = "*"
 black = "*"
 pre-commit = "*"
+aiosqlite = "^0.21.0"
 
 [tool.black]
 line-length = 88
