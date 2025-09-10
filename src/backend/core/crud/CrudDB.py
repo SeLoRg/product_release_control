@@ -1,9 +1,7 @@
-from uuid import UUID
-
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from sqlalchemy import update, delete, exc, Result
-from typing import Type, List, Optional
+from sqlalchemy import update, delete, exc, Result, tuple_
+from typing import Type, List, Optional, Any
 
 from src.backend.core.crud.BaseRepository import BaseRepository, T
 
@@ -36,6 +34,40 @@ class CrudDB(BaseRepository[T]):
         except exc.SQLAlchemyError as e:
             raise ValueError(f"Failed to get {self.model.__name__}: {str(e)}")
 
+    async def get_by_filter_tuple(
+        self,
+        filters: Optional[dict[tuple[str, ...], list[tuple[Any, ...]]]] = None,
+        limit: int = 100,
+        skip: int = 0,
+    ) -> List[T]:
+        """
+        Выбирает данные по нахождению значений колонок в списке значений.
+        То есть на вход подается список, где:
+            ключ - tuple колонок
+            значение - list из tuple значений
+        """
+
+        try:
+            stmt = select(self.model)
+
+            if filters:
+                for keys, values_list in filters.items():
+                    columns = [
+                        getattr(self.model, k) for k in keys if hasattr(self.model, k)
+                    ]
+                    if columns:
+                        stmt = stmt.filter(tuple_(*columns).in_(values_list))
+
+            stmt = stmt.limit(limit).offset(skip)
+
+            res: Result = await self.session.execute(stmt)
+            return list(res.scalars().all())
+
+        except exc.NoResultFound:
+            return []
+        except exc.SQLAlchemyError as e:
+            raise ValueError(f"Failed to get {self.model.__name__}: {str(e)}")
+
     async def create(self, **kwargs) -> T:
         try:
             new_object: T = self.model(**kwargs)
@@ -46,7 +78,7 @@ class CrudDB(BaseRepository[T]):
         except exc.SQLAlchemyError as e:
             raise ValueError(f"Failed to create {self.model.__name__}: {str(e)}")
 
-    async def update_by_id(self, object_id: UUID, **update_fields) -> Optional[T]:
+    async def update_by_id(self, object_id: int, **update_fields) -> Optional[T]:
         try:
             if not update_fields:
                 raise ValueError("No fields provided for update.")
@@ -64,7 +96,7 @@ class CrudDB(BaseRepository[T]):
         except exc.SQLAlchemyError as e:
             raise ValueError(f"Failed to update {self.model.__name__}: {str(e)}")
 
-    async def delete_by_id(self, object_id: UUID) -> None:
+    async def delete_by_id(self, object_id: int) -> None:
         try:
             stmt = delete(self.model).where(self.model.id == object_id)
             await self.session.execute(stmt)
