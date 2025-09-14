@@ -1,6 +1,6 @@
 from src.backend.core.models import Base, WorkCenters, Batches
 from sqlalchemy.orm import mapped_column, Mapped, relationship
-from sqlalchemy import String, ForeignKey
+from sqlalchemy import String, ForeignKey, DateTime
 from datetime import datetime
 
 
@@ -9,11 +9,15 @@ class ShiftTasks(Base):
 
     task_description: Mapped[str] = mapped_column(String(128), nullable=False)
     is_closed: Mapped[bool] = mapped_column(nullable=False, default=False)
-    closed_at: Mapped[datetime | None] = mapped_column(nullable=True, default=None)
+    closed_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True, default=None
+    )
     shift: Mapped[str] = mapped_column(nullable=False)
     brigade: Mapped[str] = mapped_column(nullable=False)
-    shift_start: Mapped[datetime] = mapped_column(nullable=False)
-    shift_end: Mapped[datetime] = mapped_column(nullable=False)
+    shift_start: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False
+    )
+    shift_end: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
 
     work_center_id: Mapped[int] = mapped_column(
         ForeignKey("work_centers.id"), nullable=False

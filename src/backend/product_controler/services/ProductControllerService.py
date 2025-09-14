@@ -129,8 +129,8 @@ class ProductControllerService(metaclass=LogMeta):
         **filters,
     ) -> list[ShiftTaskSchema]:
         """
-        Возвращает отсортированные массив Сменных заданий,
-        найденных по филтрам, по 'values_to_sort'
+        Возвращает  массив Сменных заданий,
+        найденных по фильтрам, отсортированные по 'values_to_sort'
         """
 
         sorted_shift_tasks: list[ShiftTasks] = (
@@ -194,7 +194,7 @@ class ProductControllerService(metaclass=LogMeta):
 
         return add_products
 
-    async def aggregate_product(self, batch_id: int, unique_code: str):
+    async def aggregate_product(self, batch_id: int, unique_code: str) -> None:
         async with self.session.begin():
             products: list[Products] = await self.product_repo.get_by_filter(
                 unique_code=unique_code

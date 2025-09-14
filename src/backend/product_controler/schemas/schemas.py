@@ -1,6 +1,6 @@
 from datetime import datetime, date
-from typing import Optional, List
-from pydantic import BaseModel, ConfigDict
+from typing import Optional, List, Literal
+from pydantic import BaseModel, ConfigDict, Field
 
 
 # --- Вспомогательные схемы (для связей) ---
@@ -106,3 +106,34 @@ class ShiftTaskIn(BaseModel):
     nomenclature: str  # Номенклатура
     shift_start: datetime  # ДатаВремяНачалаСмены
     shift_end: datetime  # ДатаВремяОкончанияСмены
+
+
+# ------------- Схемы для роутера------------------
+
+
+class ShiftTaskFilters(BaseModel):
+    task_description: Optional[str] = Field(
+        None, json_schema_extra={"example": "Упаковка"}
+    )
+    is_closed: Optional[bool] = Field(None, json_schema_extra={"example": False})
+    closed_at: Optional[datetime] = Field(
+        None, json_schema_extra={"example": "2025-09-14T10:00:00Z"}
+    )
+    shift: Optional[str] = Field(None, json_schema_extra={"example": "Ночная"})
+    brigade: Optional[str] = Field(None, json_schema_extra={"example": "Бригада 1"})
+    shift_start: Optional[datetime] = Field(
+        None, json_schema_extra={"example": "2025-09-14T08:00:00Z"}
+    )
+    shift_end: Optional[datetime] = Field(
+        None, json_schema_extra={"example": "2025-09-14T20:00:00Z"}
+    )
+    work_center_id: Optional[int] = Field(None, json_schema_extra={"example": 5})
+
+
+class ValuesToSort(BaseModel):
+    values_to_sort: Optional[dict[str, Literal["desc", "asc"]]] = Field(
+        None, json_schema_extra={"example": {"shift_start": "desc"}}
+    )
+    offset: int = 0
+    limit: int = 100
+    filters: Optional[ShiftTaskFilters] = None

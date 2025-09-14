@@ -9,12 +9,15 @@
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/crud/BatchesRepo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/crud/BatchesRepo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/crud/CrudDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/crud/CrudDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/crud/ShiftTasksRepo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/crud/ShiftTasksRepo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/logger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/logging/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/models/Batches.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/models/Batches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/core/models/WorkCenters.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/models/WorkCenters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/core/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/core/models/ShiftTasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/core/models/ShiftTasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/product_controler/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/product_controler/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/product_controler/app/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/product_controler/app/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/product_controler/schemas/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/product_controler/schemas/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/product_controler/services/ProductControllerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/product_controler/services/ProductControllerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/product_controler/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/product_controler/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,21 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_product_contrloller_service.TestIntegrationProductControllerService.test_aggregate_product_bool.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_product_contrloller_service.TestIntegrationProductControllerService.test_aggregate_product_bool.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rosti\PycharmProjects\product_release_control\src\backend\core" />
+      <recent name="C:\Users\rosti\PycharmProjects\product_release_control\src\backend\app" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic_service\alembic" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\src\backend\product_controler" />
       <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic_service" />
-      <recent name="C:\Users\rosti\PycharmProjects\product_release_control\alembic" />
     </key>
   </component>
   <component name="RunManager">

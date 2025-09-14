@@ -26,5 +26,17 @@ services:
       volumes:
         - ./alembic_service/alembic/versions:/alembic_service/alembic/versions
 
+  main_service:
+    image: main:1.0
+    build:
+      context: .
+      dockerfile: src/backend/product_controler/Dockerfile
+
+    env_file: src/backend/core/env-files/.env
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
 volumes:
   db-data:
