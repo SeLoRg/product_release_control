@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "product-release-control"
+version = "0.1.0"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+sqlalchemy = "^2.0.43"
+asyncpg = "^0.30.0"
+alembic = "^1.16.5"
+httpx = "^0.28.1"
+pydantic-settings = "^2.10.1"
+pydantic = "^2.11.7"
+uvicorn = "^0.35.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^1.1.0"
+pytest = "*"
+ruff = "*"
+black = "*"
+pre-commit = "*"
+aiosqlite = "^0.21.0"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90"]
+ignore = [
+    "E203",  # whitespace before ':'
+    "E402",  # module-level import not at top
+    "I001",  # import order
+    "I002",  # multiple imports on one line
+]
+exclude = [
+    ".venv",
+    "build",
+    "dist"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
